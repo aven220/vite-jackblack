@@ -1,0 +1,10 @@
+
+export const llenarCartasPc = (puntosMinimos,puntosHtml,deck) => {
+      let puntosPc = 0;
+      do {
+        const carta = pedirCarta(deck);
+        puntosPc = acumularPuntos(carta, puntosJugadores.length - 1);
+        crearCarta(carta, puntosJugadores.length - 1);
+      } while (puntosPc < puntosMinimos && puntosMinimos <= 21);
+      determinarGanador();
+    }
